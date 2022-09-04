@@ -110,7 +110,6 @@ sudo checkinstall \
             --pkgrelease="1" \
             --pkgname=libacars-dev \
             --provides=libacars-dev \
-            --summary="A library for decoding various ACARS message payloads" \
             --requires="" \
             -y
 sudo ldconfig
@@ -144,7 +143,6 @@ sudo checkinstall \
             --pkgrelease="1" \
             --pkgname=libcorrect-dev \
             --provides=libcorrect-dev \
-            --summary="C library for Convolutional codes and Reed-Solomon" \
             --requires="" \
             -y
 sudo ldconfig
@@ -210,7 +208,7 @@ Package: ${PACKAGE_NAME}
 Source: ${PACKAGE_SOURCE}
 Section: base
 Priority: extra
-Depends: qt5-default (>= 5.12)
+Depends: qt5-default
 Provides: ${PACKAGE_NAME}
 Maintainer: ${MAINTAINER}
 Version: ${PACKAGE_VERSION%_*}
@@ -262,7 +260,7 @@ Package: ${PACKAGE_NAME}
 Source: ${PACKAGE_SOURCE}
 Section: base
 Priority: extra
-Depends: qt5-default (>= 5.12), qtmultimedia5-dev, libvorbis-dev, libogg-dev, libqt5multimedia5-plugins, libqcustomplot-dev, libqt5svg5-dev, libzmq3-dev
+Depends: qt5-default, qtmultimedia5-dev, libvorbis-dev, libogg-dev, libqt5multimedia5-plugins, libqcustomplot-dev, libqt5svg5-dev, libzmq3-dev
 Provides: ${PACKAGE_NAME}
 Maintainer: ${MAINTAINER}
 Version: ${PACKAGE_VERSION%_*}
